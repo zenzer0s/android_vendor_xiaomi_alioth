@@ -109,6 +109,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/xiaomi/alioth/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
@@ -169,6 +170,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/alioth/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm.policy \
     vendor/xiaomi/alioth/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/alioth/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/seccomp_policy/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
+    vendor/xiaomi/alioth/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/xiaomi/alioth/proprietary/vendor/etc/sensors/calibratedCheck.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/calibratedCheck.json \
     vendor/xiaomi/alioth/proprietary/vendor/etc/sensors/config/ak991x_dri_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/ak991x_dri_0.json \
     vendor/xiaomi/alioth/proprietary/vendor/etc/sensors/config/bu27030_0_back.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bu27030_0_back.json \
@@ -370,6 +373,7 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.kona \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     liba2dpoffload \
+    libFileMux_proprietary \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -398,6 +402,9 @@ PRODUCT_PACKAGES += \
     libhdmipassthru \
     libhfp \
     liblistensoundmodel2 \
+    libmm-hdcpmgr \
+    libmmrtpdecoder_proprietary \
+    libmmrtpencoder_proprietary \
     libmmhardware \
     libmmosal_vendor \
     libmulawdec \
@@ -413,8 +420,30 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot \
     libssrec \
+    libwfdcodecv4l2_proprietary \
+    libwfdcommonutils_proprietary \
+    libwfdconfigutils_proprietary \
+    libwfddisplayconfig_proprietary \
+    libwfdhdcpcp \
+    libwfdhdcpservice_proprietary \
+    libwfdmminterface_proprietary \
+    libwfdmmservice_proprietary \
+    libwfdmmsrc_proprietary \
+    libwfdmodulehdcpsession \
+    libwfdrtsp_proprietary \
+    libwfdsessionmodule \
+    libwfdsourcesession_proprietary \
+    libwfdsourcesm_proprietary \
+    libwfduibcinterface_proprietary \
+    libwfduibcsink_proprietary \
+    libwfduibcsinkinterface_proprietary \
+    libwfduibcsrc_proprietary \
+    libwfduibcsrcinterface_proprietary \
+    libwfdutils_proprietary \
     libasphere \
     libshoebox \
+    vendor.qti.hardware.wifidisplaysession@1.0_vendor \
+    vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     vendor.qti.hardware.audiohalext@1.0 \
     libxlog \
     android.hardware.secure_element@1.0-impl \
@@ -1081,6 +1110,7 @@ PRODUCT_PACKAGES += \
     xtwifi-client \
     xtwifi-inet-agent \
     dpmd \
+    wifidisplayhalservice \
     wfdservice64
 
 PRODUCT_PACKAGES += \
